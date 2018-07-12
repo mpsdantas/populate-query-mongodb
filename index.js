@@ -4,8 +4,8 @@ mongoose.Promise = global.Promise; // → Queremos que o mongoose utilize promis
 mongoose.connection.on('error', err => {
     console.log(`🙅 🚫 → ${err.message}`);
 });
-require('./Person');
-require('./Story');
+require('models/Person');
+require('models/Story');
 const Person = mongoose.model('Person');
 const Story = mongoose.model('Story');
 const querySave = async () =>{
